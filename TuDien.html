@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Nhập từ cần tìm kiếm </label>
+    <input type="text" id="tu">
+    <input type="button" id="timkiem" value="Tìm kiếm" onclick="TimKiem()">
+    <p id="result"></p>
+    <script>
+        function TimKiem(){
+            let str = document.getElementById('tu').value;
+            console.log(str);
+            let a = ["banana","apple","strawberry","grapes","blueberry","plum"];
+            let b = ["Chuối","Táo","Dâu tây","Nho","Việt Quất","Mận"];
+            let i = a.indexOf(str);
+            console.log(i);
+            if(i == -1){
+                document.getElementById('result').innerHTML = "Không tìm thấy từ";
+            } else{
+                document.getElementById('result').innerHTML = b[i];
+            }
+        }
+    </script>
+</body>
+</html>
